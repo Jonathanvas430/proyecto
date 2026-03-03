@@ -1,128 +1,154 @@
-body {
-    font-family: 'Poppins', sans-serif;
+/* RESET */
+* {
     margin: 0;
-    background-color: aliceblue;
-    color: black;
-    line-height: 1.6;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* GENERAL */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f5f9;
+    text-align: center;
 }
 
 /* HEADER */
 header {
-    background-color: #1e293b;
+    background-color: #0f172a;
     color: white;
-    padding: 60px 20px;
-    text-align: center;
+    padding: 20px;
     position: relative;
 }
 
-/* Logo en esquina izquierda (ESCRITORIO) */
+/* LOGO SIEMPRE EN ESQUINA IZQUIERDA */
 .logo {
-    width: 150px;
+    width: 70px;
     position: absolute;
-    top: 20px;
     left: 20px;
+    top: 20px;
 }
 
-/* Título */
-header h1 {
-    margin: 0;
-    font-size: 2.2rem;
-}
-
-/* Subtítulo */
-header p {
-    font-size: 1.1rem;
-    opacity: 0.9;
-}
-
-/* BOTÓN */
-#btnInfo {
-    padding: 10px 20px;
-    border-radius: 20px;
-    border: none;
-    cursor: pointer;
-}
-
-#btnInfo:hover {
-    background-color: darkblue;
-    transform: scale(1.05);
-    transition: 0.3s;
-}
-
-/* MAIN */
-main {
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 20px;
-    text-align: center;
-}
-
-/* SECCIONES */
-section {
-    background: white;
-    padding: 25px;
-    border-radius: 10px;
-    margin-bottom: 30px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-}
-
-section h2 {
+/* TITULOS */
+h1 {
     margin-bottom: 10px;
 }
 
+h2 {
+    margin-bottom: 10px;
+}
+
+/* CONTENIDO */
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
 ul {
-    list-style-position: inside;
-    text-align: left;
+    list-style: none;
+    margin-top: 10px;
+}
+
+ul li {
+    padding: 5px 0;
+}
+
+/* BOTONES */
+button {
+    margin-top: 10px;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: #2563eb;
+    color: white;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #1d4ed8;
+}
+
+/* ===== MENU DESPLEGABLE ===== */
+
+#menuContainer {
+    position: relative;
     display: inline-block;
+}
+
+.menu-procedimiento {
+    display: none;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    background-color: white;
+    min-width: 180px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    padding: 10px;
+    z-index: 1000;
+}
+
+.menu-procedimiento a {
+    display: block;
+    padding: 8px;
+    text-decoration: none;
+    color: black;
+    border-radius: 5px;
+}
+
+.menu-procedimiento a:hover {
+    background-color: #e2e8f0;
+}
+
+.mostrar {
+    display: block;
+}
+
+/* MENSAJE HORARIO */
+#mensaje {
+    display: none;
+    margin-top: 10px;
+}
+
+/* CONTACTO */
+.contacto {
+    background-color: #e2e8f0;
+    padding: 20px;
 }
 
 /* FOOTER */
 footer {
-    text-align: center;
-    padding: 20px;
-    background-color: black;
+    background-color: #0f172a;
     color: white;
-    font-size: 0.9rem;
+    padding: 15px;
+    margin-top: 20px;
 }
 
-/* CONTACTO */
-section.contacto {
-    background-color: black;
-}
-
-/* 📱 RESPONSIVE PARA TELÉFONO */
+/* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
 
-    header {
-        padding: 40px 20px;
-    }
-
-    .logo {
-        position: static;   /* deja de estar flotando */
-        width: 100px;
-        margin-bottom: 15px;
-    }
-
-    header h1 {
-        font-size: 1.6rem;
-    }
-
-    header p {
-        font-size: 1rem;
-        padding: 0 10px;
-    }
-
-    main {
-        margin: 20px auto;
+    body {
         padding: 10px;
     }
 
-    section {
-        padding: 20px;
+    h1 {
+        font-size: 22px;
     }
 
-    #btnInfo {
-        width: 100%;
+    h2 {
+        font-size: 18px;
+    }
+
+    button {
+        width: 90%;
         max-width: 250px;
+    }
+
+    .menu-procedimiento {
+        left: 50%;
+        transform: translateX(-50%);
     }
 }
