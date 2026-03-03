@@ -22,7 +22,15 @@ header {
         top: 10px;
         right: 10px;
         z-index: 2000;
+        
     }
+    .logo {
+    width: 150px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
 }
 #menuContainer {
     position: absolute;
@@ -76,14 +84,6 @@ header {
 #menu a:hover {
     background-color: red;
     color: white;
-}
-
-/* Logo en esquina izquierda */
-.logo {
-    width: 150px;
-    position: absolute;
-    top: 20px;
-    left: 20px;
 }
 
 /* Título */
