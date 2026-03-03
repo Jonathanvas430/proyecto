@@ -1,35 +1,151 @@
-/* ================= RESPONSIVE SIMPLE ================= */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background-color: aliceblue;
+    color: black;
+    line-height: 1.6;
+}
+
+/* HEADER */
+header {
+    background-color: black;
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+    position: relative; /* necesario para posicionar el logo y menú */
+}
+
+/* MENU */
 @media (max-width: 768px) {
-
-    header {
-        padding-top: 120px;
-    }
-
-    .logo {
-        width: 110px;
-        top: 10px;
-        left: 10px;
-    }
-
     #menuContainer {
-        top: 20px;
+        position: fixed;
+        top: 10px;
         right: 10px;
+        z-index: 2000;
     }
+}
+#menuContainer {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    
+}
+#btnMenu {
+    background-color: blue;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
 
-    main {
-        margin: 20px auto;
-        padding: 10px;
-    }
+}
 
-    section {
-        margin-bottom: 20px;
-    }
+#btnMenu:hover {
+    background-color: red;
+    transform: scale(1.05);
+    transition: 0.3s;
+}
 
-    header h1 {
-        font-size: 1.6rem;
-    }
+#menu {
+    display: none; /* oculto por defecto */
+    position: absolute;
+    top: 100%; /* justo debajo del botón */
+    right: 0;
+    background-color: black;
+    color: yellow;
+    min-width: 180px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    z-index: 1000;
+}
 
-    header p {
-        font-size: 1rem;
-    }
+#menu.mostrar {
+    display: block;
+}
+
+#menu a {
+    display: block;
+    padding: 10px;
+    background-color: white;
+    color: black;
+    text-decoration: none;
+}
+
+#menu a:hover {
+    background-color: red;
+    color: white;
+}
+
+/* Logo en esquina izquierda */
+.logo {
+    width: 150px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+/* Título */
+header h1 {
+    margin: 0;
+    font-size: 2.2rem;
+}
+
+/* Subtítulo */
+header p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* BOTÓN HORARIO */
+#btnInfo:hover {
+    background-color: darkblue;
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+
+/* MAIN */
+main {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+/* SECCIONES */
+section {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+section h2 {
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style-position: inside;
+    text-align: left;
+    display: inline-block;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: black;
+    color: white;
+    font-size: 0.9rem;
+}
+
+section:last-of-type {
+    text-align: center;
+}
+
+section.contacto {
+    background-color: black;
+    color: white;
 }
