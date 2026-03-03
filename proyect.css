@@ -1,26 +1,26 @@
-/* RESET */
+/* ================= RESET ================= */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* GENERAL */
+/* ================= GENERAL ================= */
 body {
     font-family: Arial, sans-serif;
     background-color: #f1f5f9;
     text-align: center;
 }
 
-/* HEADER */
+/* ================= HEADER ================= */
 header {
     background-color: #0f172a;
     color: white;
-    padding: 20px;
+    padding: 30px 20px;
     position: relative;
 }
 
-/* LOGO SIEMPRE EN ESQUINA IZQUIERDA */
+/* Logo siempre en la esquina izquierda */
 .logo {
     width: 70px;
     position: absolute;
@@ -28,7 +28,7 @@ header {
     top: 20px;
 }
 
-/* TITULOS */
+/* ================= TITULOS ================= */
 h1 {
     margin-bottom: 10px;
 }
@@ -37,13 +37,20 @@ h2 {
     margin-bottom: 10px;
 }
 
-/* CONTENIDO */
+/* ================= CONTENIDO ================= */
 main {
-    padding: 20px;
+    padding: 30px 15px;
 }
 
+/* Tarjetas (los cuadros que querías) */
 section {
-    margin-bottom: 40px;
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    max-width: 900px;
+    margin: 0 auto 40px auto;
+    text-align: center;
 }
 
 ul {
@@ -52,10 +59,10 @@ ul {
 }
 
 ul li {
-    padding: 5px 0;
+    padding: 6px 0;
 }
 
-/* BOTONES */
+/* ================= BOTONES ================= */
 button {
     margin-top: 10px;
     padding: 8px 15px;
@@ -71,7 +78,7 @@ button:hover {
     background-color: #1d4ed8;
 }
 
-/* ===== MENU DESPLEGABLE ===== */
+/* ================= MENU DESPLEGABLE ================= */
 
 #menuContainer {
     position: relative;
@@ -103,23 +110,25 @@ button:hover {
     background-color: #e2e8f0;
 }
 
+/* Clase que activa el menú */
 .mostrar {
     display: block;
 }
 
-/* MENSAJE HORARIO */
+/* ================= MENSAJE HORARIO ================= */
 #mensaje {
     display: none;
     margin-top: 10px;
 }
 
-/* CONTACTO */
+/* ================= CONTACTO ================= */
 .contacto {
     background-color: #e2e8f0;
-    padding: 20px;
+    padding: 25px;
+    margin-top: 20px;
 }
 
-/* FOOTER */
+/* ================= FOOTER ================= */
 footer {
     background-color: #0f172a;
     color: white;
@@ -127,7 +136,7 @@ footer {
     margin-top: 20px;
 }
 
-/* ===== RESPONSIVE ===== */
+/* ================= RESPONSIVE ================= */
 @media (max-width: 768px) {
 
     body {
@@ -142,6 +151,10 @@ footer {
         font-size: 18px;
     }
 
+    section {
+        padding: 20px;
+    }
+
     button {
         width: 90%;
         max-width: 250px;
@@ -152,3 +165,4 @@ footer {
         transform: translateX(-50%);
     }
 }
+
