@@ -1,168 +1,42 @@
-/* ================= RESET ================= */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* ================= GENERAL ================= */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f1f5f9;
-    text-align: center;
-}
-
-/* ================= HEADER ================= */
-header {
-    background-color: #0f172a;
-    color: white;
-    padding: 30px 20px;
-    position: relative;
-}
-
-/* Logo siempre en la esquina izquierda */
-.logo {
-    width: 70px;
-    position: absolute;
-    left: 20px;
-    top: 20px;
-}
-
-/* ================= TITULOS ================= */
-h1 {
-    margin-bottom: 10px;
-}
-
-h2 {
-    margin-bottom: 10px;
-}
-
-/* ================= CONTENIDO ================= */
-main {
-    padding: 30px 15px;
-}
-
-/* Tarjetas (los cuadros que querías) */
-section {
-    background-color: white;
-    padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    max-width: 900px;
-    margin: 0 auto 40px auto;
-    text-align: center;
-}
-
-ul {
-    list-style: none;
-    margin-top: 10px;
-}
-
-ul li {
-    padding: 6px 0;
-}
-
-/* ================= BOTONES ================= */
-button {
-    margin-top: 10px;
-    padding: 8px 15px;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    background-color: #2563eb;
-    color: white;
-    font-weight: bold;
-}
-
-button:hover {
-    background-color: #1d4ed8;
-}
-
-/* ================= MENU DESPLEGABLE ================= */
-
-#menuContainer {
-    position: relative;
-    display: inline-block;
-}
-
-.menu-procedimiento {
-    display: none;
-    position: absolute;
-    top: 40px;
-    left: 0;
-    background-color: white;
-    min-width: 180px;
-    border-radius: 8px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-    padding: 10px;
-    z-index: 1000;
-}
-
-.menu-procedimiento a {
-    display: block;
-    padding: 8px;
-    text-decoration: none;
-    color: black;
-    border-radius: 5px;
-}
-
-.menu-procedimiento a:hover {
-    background-color: #e2e8f0;
-}
-
-/* Clase que activa el menú */
-.mostrar {
-    display: block;
-}
-
-/* ================= MENSAJE HORARIO ================= */
-#mensaje {
-    display: none;
-    margin-top: 10px;
-}
-
-/* ================= CONTACTO ================= */
-.contacto {
-    background-color: #e2e8f0;
-    padding: 25px;
-    margin-top: 20px;
-}
-
-/* ================= FOOTER ================= */
-footer {
-    background-color: #0f172a;
-    color: white;
-    padding: 15px;
-    margin-top: 20px;
-}
-
 /* ================= RESPONSIVE ================= */
 @media (max-width: 768px) {
 
-    body {
-        padding: 10px;
+    header {
+        padding: 80px 15px 40px 15px;
     }
 
-    h1 {
-        font-size: 22px;
+    .logo {
+        width: 100px;
+        position: static;
+        display: block;
+        margin: 0 auto 15px auto;
     }
 
-    h2 {
-        font-size: 18px;
+    #menuContainer {
+        position: static;
+        margin-bottom: 15px;
+    }
+
+    #btnMenu {
+        width: 80%;
+        max-width: 250px;
+    }
+
+    #menu {
+        right: 50%;
+        transform: translateX(50%);
+    }
+
+    main {
+        margin: 20px auto;
+        padding: 15px;
     }
 
     section {
         padding: 20px;
     }
 
-    button {
-        width: 90%;
-        max-width: 250px;
-    }
-
-    .menu-procedimiento {
-        left: 50%;
-        transform: translateX(-50%);
+    ul {
+        text-align: center;
     }
 }
-
