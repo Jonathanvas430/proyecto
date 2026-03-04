@@ -1,4 +1,4 @@
-body {
+ body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     background-color: aliceblue;
@@ -8,13 +8,24 @@ body {
 
 /* HEADER */
 header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     background-color: black;
     color: white;
-    padding: 60px 20px;
+    padding: 40px 20px;
     text-align: center;
-    position: relative;
+    position: relative; /* necesario para posicionar el logo */
 }
 
+/* Logo en esquina izquierda */
+.logo {
+    max-width: 120px;
+    height: auto;
+    margin-bottom: 15px;
+   
+}
 
 /* Título */
 header h1 {
@@ -29,36 +40,13 @@ header p {
 }
 
 /* BOTÓN */
-#menu {
-    display: none;
-    padding: 10px 20px;
-    border-radius: 20px;
-    background-color: blue;
-}
-
-#menu.mostrar {
-    display: block;
-    position: absolute;
-    top: auto;
-    left: 50%;
-    transform: translateX(-152%);
-    margin-top: 5px; /* lo ajustas según lo necesites */
-    z-index: 1000;
-}
-#btnMenu {
-    padding: 10px 20px;
-    border-radius: 20px;
-    border: none;
-    cursor: pointer;
-    background-color: blue;
-    transition: all 0.3s; /* transición suave para hover */
-}
-
-#btnMenu:hover {
+#btnInfo:hover {
     background-color: red;
-    color: green;
+    color: yellow;
     transform: scale(1.05);
+    transition: 0.3s;
 }
+
 /* MAIN */
 main {
     max-width: 900px;
@@ -75,6 +63,7 @@ section {
     margin-bottom: 30px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.08);
 }
+
 section h2 {
     margin-bottom: 10px;
 }
@@ -84,7 +73,6 @@ ul {
     text-align: left;
     display: inline-block;
 }
-
 /* FOOTER */
 footer {
     text-align: center;
@@ -93,46 +81,10 @@ footer {
     color: white;
     font-size: 0.9rem;
 }
-
-/* CONTACTO */
-section.contacto {
-    background-color: black;
-    color: white;
+section:last-of-type {
+    text-align: center;
 }
+section.contacto {
+    background-color:black;
 
-/* 📱 RESPONSIVE PARA TELÉFONO */
-@media (max-width: 768px) {
-
-    header {
-        padding: 40px 20px;
-    }
-
-    .logo {
-        position: static;   /* deja de estar flotando */
-        width: 100px;
-        margin-bottom: 15px;
-    }
-
-    header h1 {
-        font-size: 1.6rem;
-    }
-
-    header p {
-        font-size: 1rem;
-        padding: 0 10px;
-    }
-
-    main {
-        margin: 20px auto;
-        padding: 10px;
-    }
-
-    section {
-        padding: 20px;
-    }
-    
-    #btnInfo {
-        width: 100%;
-        max-width: 200px;
-    }
 }
