@@ -33,15 +33,17 @@ header p {
     display: none;
     padding: 10px 20px;
     border-radius: 20px;
-    background-color: green;
+    background-color: blue;
 }
+
 #menu.mostrar {
     display: block;
     position: absolute;
-    top: 100%;
+    top: auto;
     left: 50%;
-    transform: translateX(-50%);
-    margin-top: 10px;
+    transform: translateX(-152%);
+    margin-top: 5px; /* lo ajustas según lo necesites */
+    z-index: 1000;
 }
 #btnMenu {
     padding: 10px 20px;
