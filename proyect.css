@@ -12,79 +12,9 @@ header {
     color: white;
     padding: 60px 20px;
     text-align: center;
-    position: relative; /* necesario para posicionar el logo y menú */
+    position: relative;
 }
 
-/* MENU */
-@media (max-width: 768px) {
-    #menuContainer {
-        position: fixed;
-        top: 10px;
-        right: 10px;
-        z-index: 2000;
-        
-    }
-    .logo {
-    width: 150px;
-    position: absolute;
-    top: 20px;
-    left: 20px;
-}
-
-}
-#menuContainer {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    
-}
-#btnMenu {
-    background-color: blue;
-    color: black;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1rem;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.3s;
-
-}
-
-#btnMenu:hover {
-    background-color: red;
-    transform: scale(1.05);
-    transition: 0.3s;
-}
-
-#menu {
-    display: none; /* oculto por defecto */
-    position: absolute;
-    top: 100%; /* justo debajo del botón */
-    right: 0;
-    background-color: black;
-    color: yellow;
-    min-width: 180px;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-    border-radius: 5px;
-    z-index: 1000;
-}
-
-#menu.mostrar {
-    display: block;
-}
-
-#menu a {
-    display: block;
-    padding: 10px;
-    background-color: white;
-    color: black;
-    text-decoration: none;
-}
-
-#menu a:hover {
-    background-color: red;
-    color: white;
-}
 
 /* Título */
 header h1 {
@@ -98,13 +28,35 @@ header p {
     opacity: 0.9;
 }
 
-/* BOTÓN HORARIO */
-#btnInfo:hover {
-    background-color: darkblue;
-    transform: scale(1.05);
-    transition: 0.3s;
+/* BOTÓN */
+#menu {
+    display: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-color: green;
+}
+#menu.mostrar {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 10px;
+}
+#btnMenu {
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    background-color: blue;
+    transition: all 0.3s; /* transición suave para hover */
 }
 
+#btnMenu:hover {
+    background-color: red;
+    color: green;
+    transform: scale(1.05);
+}
 /* MAIN */
 main {
     max-width: 900px;
@@ -121,7 +73,6 @@ section {
     margin-bottom: 30px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.08);
 }
-
 section h2 {
     margin-bottom: 10px;
 }
@@ -141,11 +92,45 @@ footer {
     font-size: 0.9rem;
 }
 
-section:last-of-type {
-    text-align: center;
-}
-
+/* CONTACTO */
 section.contacto {
     background-color: black;
     color: white;
+}
+
+/* 📱 RESPONSIVE PARA TELÉFONO */
+@media (max-width: 768px) {
+
+    header {
+        padding: 40px 20px;
+    }
+
+    .logo {
+        position: static;   /* deja de estar flotando */
+        width: 100px;
+        margin-bottom: 15px;
+    }
+
+    header h1 {
+        font-size: 1.6rem;
+    }
+
+    header p {
+        font-size: 1rem;
+        padding: 0 10px;
+    }
+
+    main {
+        margin: 20px auto;
+        padding: 10px;
+    }
+
+    section {
+        padding: 20px;
+    }
+    
+    #btnInfo {
+        width: 100%;
+        max-width: 200px;
+    }
 }
